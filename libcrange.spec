@@ -41,7 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %doc
-
+%{_bindir}/crange
+%{_includedir}/libcrange.h
+%{_libdir}/libcrange*
 
 
 %changelog

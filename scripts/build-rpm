@@ -1,0 +1,15 @@
+#!/bin/sh
+
+VERSION=$1
+
+if [ -z $VERSION ]
+then
+  echo "Must pass VERSION argument."
+  exit 1
+fi
+
+set -e
+set -x
+
+tar --transform="s#source/#libcrange-${VERSION}/#" -cvzf /home/$USER/rpmbuild/SOURCES/libcrange-${VERSION}.tar.gz source/ || exit 1
+rpmbuild -bb libcrange.spec
