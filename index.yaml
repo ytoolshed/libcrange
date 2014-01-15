@@ -1,7 +1,0 @@
-default:
-  name: libcrange
-  summary: C version of librange
-  version: '1.0.1'
-#  requires:
-#    - cpan-yaml-syck
-
